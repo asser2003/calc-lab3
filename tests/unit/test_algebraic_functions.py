@@ -8,7 +8,7 @@ import os, sys
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")) 
 sys.path.insert(0, project_root) 
  
-from src.utils import add, sub, mul, div 
+from src.utils import add, sub, mul, div, exponent
  
 class TestCalculator: 
  
@@ -26,3 +26,6 @@ class TestCalculator:
 
     def test_division(self):
         assert 6 == div(12, 2)
+
+    def test_exponent(self):
+        assert exponent(2, 3) == 8
